@@ -301,66 +301,28 @@
 
         .contact-description {
             color: #aaa;
-            margin-bottom: 45px;
+            margin-bottom: 35px;
         }
 
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            text-align: left;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 18px;
-            background: #080808;
-            border: 1px solid #333;
+        .contact-email {
+            display: inline-block;
+            font-size: clamp(18px, 3vw, 25px);
             color: #fff;
-            font-family: inherit;
-            font-size: 14px;
-            outline: none;
-            transition: border-color .3s;
+            letter-spacing: .5px;
+            padding: 15px 0;
+            border-bottom: 1px solid #777;
+            transition: color .3s, border-color .3s;
         }
 
-        .contact-form input::placeholder,
-        .contact-form textarea::placeholder {
-            color: #777;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
+        .contact-email:hover {
+            color: #aaa;
             border-color: #fff;
-        }
-
-        .contact-form textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
-
-        .contact-form button {
-            padding: 19px;
-            background: #fff;
-            color: #000;
-            border: 1px solid #fff;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: .3s;
-        }
-
-        .contact-form button:hover {
-            background: transparent;
-            color: #fff;
         }
 
         .contact-note {
             color: #777;
             font-size: 12px;
-            margin-top: 20px;
-            text-align: center;
+            margin-top: 25px;
         }
 
         /* FOOTER */
@@ -652,7 +614,7 @@
 
         </section>
 
-        <!-- CONTACT FORM -->
+        <!-- CONTACT -->
 
         <section class="contact" id="contact">
 
@@ -664,83 +626,18 @@
 
                 <p class="contact-description">
                     Have a project, idea or potential collaboration?
-                    Send us a message.
+                    Reach out to us directly.
                 </p>
 
-                <form
-                    action="https://formsubmit.co/contact.shootactive@gmail.com"
-                    method="POST"
-                    class="contact-form"
+                <a
+                    href="mailto:contact.shootactive@gmail.com?subject=Enquiry%20%E2%80%94%20Aearis%20Oy"
+                    class="contact-email"
                 >
-
-                    <!-- Email subject -->
-                    <input
-                        type="hidden"
-                        name="_subject"
-                        value="New enquiry — Aearis Oy"
-                    >
-
-                    <!-- Email layout -->
-                    <input
-                        type="hidden"
-                        name="_template"
-                        value="table"
-                    >
-
-                    <!-- Redirect to Aearis Oy thank-you page -->
-                    <input
-                        type="hidden"
-                        name="_next"
-                        value="https://aearis.com/thank-you.html"
-                    >
-
-                    <!-- Spam protection -->
-                    <input
-                        type="text"
-                        name="_honey"
-                        style="display:none"
-                        tabindex="-1"
-                        autocomplete="off"
-                    >
-
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Your name"
-                        autocomplete="name"
-                        required
-                    >
-
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Your email address"
-                        autocomplete="email"
-                        required
-                    >
-
-                    <input
-                        type="text"
-                        name="subject"
-                        placeholder="Subject"
-                        required
-                    >
-
-                    <textarea
-                        name="message"
-                        placeholder="Tell us about your project..."
-                        rows="6"
-                        required
-                    ></textarea>
-
-                    <button type="submit">
-                        SEND MESSAGE ↗
-                    </button>
-
-                </form>
+                    contact.shootactive@gmail.com
+                </a>
 
                 <p class="contact-note">
-                    Your enquiry will be sent directly to our team.
+                    For business enquiries and collaborations.
                 </p>
 
             </div>
