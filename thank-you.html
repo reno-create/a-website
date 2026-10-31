@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080808">
+
+    <title>Message Received | Aearis Oy</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background: #080808;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .confirmation {
+            max-width: 650px;
+            animation: reveal 1s ease both;
+        }
+
+        .brand {
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            margin-bottom: 65px;
+        }
+
+        .label {
+            color: #888;
+            font-size: 11px;
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(42px, 8vw, 76px);
+            letter-spacing: -3px;
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        p {
+            color: #999;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 16px 30px;
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 2px;
+            transition: .3s;
+        }
+
+        a:hover {
+            background: white;
+            color: black;
+        }
+
+        .tagline {
+            margin-top: 75px;
+            color: #666;
+            font-size: 12px;
+            letter-spacing: 4px;
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="confirmation">
+
+        <div class="brand">AEARIS OY</div>
+
+        <div class="label">MESSAGE RECEIVED</div>
+
+        <h1>Thank you.</h1>
+
+        <p>
+            Your message has been received.
+            Thank you for reaching out to Aearis Oy.
+            We'll be in touch.
+        </p>
+
+        <a href="./index.html">RETURN HOME ↗</a>
+
+        <div class="tagline">SHOOT.</div>
+
+    </main>
+
+</body>
+</html>
