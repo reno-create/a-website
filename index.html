@@ -1,517 +1,228 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Aearis Oy | SHOOT.</title>
-
-    <meta name="description" content="Aearis Oy explores Unmanned Aircraft Systems and Artificial Intelligence.">
-    <meta name="theme-color" content="#080808">
-
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aearis Oy develops intelligent autonomous aerial systems and AI-powered technologies.">
+  <title>Aearis Oy | Intelligent Autonomous Systems</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<script src="script.js"></script>
+
 <body>
 
-    <!-- HEADER -->
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#home" class="logo">
+        <img src="logo.png" alt="Aearis Oy logo"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <span class="logo-fallback">AEARIS</span>
+      </a>
 
-    <header class="site-header">
+      <nav class="desktop-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#technology">Technology</a>
+        <a href="#approach">Our Approach</a>
+        <a href="#contact" class="nav-contact">Contact</a>
+      </nav>
 
-        <div class="header-inner">
+      <button class="menu-toggle" aria-label="Open menu"
+              aria-expanded="false" aria-controls="mobile-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
 
-            <a href="#home" class="brand" aria-label="Aearis home">
+    <nav class="mobile-nav" id="mobile-nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#technology">Technology</a>
+      <a href="#approach">Our Approach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-                <img
-                    src="./logo.png"
-                    alt="Aearis Oy"
-                    class="brand-logo"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
-                >
+  <main>
 
-                <span class="logo-placeholder">
-                    AEARIS<span>OY</span>
-                </span>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">AEROSPACE · AUTONOMY · ARTIFICIAL INTELLIGENCE</p>
 
-            </a>
+        <h1>
+          Intelligent Systems.<br>
+          <span>New Perspectives.</span>
+        </h1>
 
-            <nav class="desktop-nav" aria-label="Main navigation">
-                <a href="#about">About</a>
-                <a href="#technology">Technology</a>
-                <a href="#approach">Approach</a>
-                <a href="#contact">Contact</a>
-            </nav>
+        <p class="hero-description">
+          Developing intelligent autonomous aerial systems and
+          advanced AI technologies for a smarter, more connected future.
+        </p>
 
-            <a href="#contact" class="header-contact">
-                GET IN TOUCH <span>↗</span>
-            </a>
+        <a href="#about" class="primary-button">Discover Aearis</a>
+      </div>
 
-            <button
-                class="menu-toggle"
-                type="button"
-                aria-label="Open navigation"
-                aria-expanded="false"
-            >
-                <span></span>
-                <span></span>
-            </button>
+      <div class="hero-decoration">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit-center"></div>
+      </div>
+    </section>
 
+    <!-- About -->
+    <section class="section about-section" id="about">
+      <div class="section-inner about-grid">
+        <div>
+          <p class="eyebrow">WHO WE ARE</p>
+          <h2>Engineering the <span>future of autonomy.</span></h2>
         </div>
 
-        <nav class="mobile-nav" aria-label="Mobile navigation">
-
-            <a href="#about">About</a>
-            <a href="#technology">Technology</a>
-            <a href="#approach">Approach</a>
-            <a href="#contact">Contact</a>
-
-        </nav>
-
-    </header>
-
-
-    <main>
-
-        <!-- HERO -->
-
-        <section class="hero" id="home">
-
-            <div class="hero-grid"></div>
-
-            <div class="hero-content">
-
-                <p class="hero-kicker">
-                    AEARIS OY &nbsp; / &nbsp; UAS &nbsp; / &nbsp; ARTIFICIAL INTELLIGENCE
-                </p>
-
-                <h1>
-                    SHOOT<span class="hero-period">.</span>
-                </h1>
-
-                <div class="hero-subtitle">
-
-                    <span>Unmanned Aircraft Systems</span>
-
-                    <span class="subtitle-divider"></span>
-
-                    <span>Artificial Intelligence</span>
-
-                </div>
-
-                <a href="#technology" class="hero-link">
-                    EXPLORE AEARIS <span>↗</span>
-                </a>
-
-            </div>
-
-            <div class="hero-side-label">
-                TECHNOLOGY / EXPLORATION / INNOVATION
-            </div>
-
-            <div class="hero-index">
-                <span>INDEPENDENT TECHNOLOGY VENTURE</span>
-                <span>FINLAND · EST. AEARIS OY</span>
-            </div>
-
-        </section>
-
-
-        <!-- ABOUT -->
-
-        <section class="section intro" id="about">
-
-            <div class="section-inner">
-
-                <div class="section-label">
-                    <span>01</span>
-                    <span>ABOUT AEARIS</span>
-                </div>
-
-                <div class="intro-layout">
-
-                    <h2>
-                        Technology changes how we
-                        <span>see the world.</span>
-                    </h2>
-
-                    <div class="intro-copy">
-
-                        <p class="lead">
-                            Exploring new perspectives through
-                            technology, intelligence and innovation.
-                        </p>
-
-                        <p>
-                            Aearis Oy is an emerging technology venture
-                            focused on Unmanned Aircraft Systems and
-                            Artificial Intelligence.
-                        </p>
-
-                        <p>
-                            We explore the capabilities of aerial
-                            technology, intelligent systems and the
-                            opportunities they create across modern
-                            industries.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- TECHNOLOGY -->
-
-        <section class="section technology" id="technology">
-
-            <div class="section-inner">
-
-                <div class="section-label">
-                    <span>02</span>
-                    <span>AREAS OF INTEREST</span>
-                </div>
-
-                <div class="technology-heading">
-
-                    <h2>
-                        Two fields.<br>
-                        <span>A world of possibilities.</span>
-                    </h2>
-
-                    <p>
-                        Exploring the intersection of physical
-                        technology and intelligent digital systems.
-                    </p>
-
-                </div>
-
-
-                <div class="technology-grid">
-
-
-                    <!-- UAS CARD -->
-
-                    <article class="technology-card">
-
-                        <div class="card-top">
-                            <span>01 / AERIAL TECHNOLOGY</span>
-                            <span class="card-symbol">↗</span>
-                        </div>
-
-                        <div class="technical-graphic uas-graphic">
-
-                            <div class="orbit orbit-one"></div>
-                            <div class="orbit orbit-two"></div>
-                            <div class="orbit orbit-three"></div>
-
-                            <div class="graphic-dot"></div>
-
-                            <div class="graphic-cross cross-one"></div>
-                            <div class="graphic-cross cross-two"></div>
-
-                        </div>
-
-                        <div class="card-copy">
-
-                            <p class="card-category">UAS</p>
-
-                            <h3>Unmanned Aircraft Systems</h3>
-
-                            <p>
-                                Exploring aerial platforms, flight
-                                technology, aerial imaging and the
-                                expanding applications of unmanned
-                                aircraft systems.
-                            </p>
-
-                            <div class="tag-list">
-                                <span>AERIAL SYSTEMS</span>
-                                <span>FLIGHT TECHNOLOGY</span>
-                                <span>IMAGING</span>
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- AI CARD -->
-
-                    <article class="technology-card">
-
-                        <div class="card-top">
-                            <span>02 / INTELLIGENT SYSTEMS</span>
-                            <span class="card-symbol">↗</span>
-                        </div>
-
-                        <div class="technical-graphic ai-graphic">
-
-                            <div class="ai-lines"></div>
-
-                            <div class="ai-node node-one"></div>
-                            <div class="ai-node node-two"></div>
-                            <div class="ai-node node-three"></div>
-                            <div class="ai-node node-four"></div>
-                            <div class="ai-node node-five"></div>
-                            <div class="ai-node node-six"></div>
-
-                        </div>
-
-                        <div class="card-copy">
-
-                            <p class="card-category">AI</p>
-
-                            <h3>Artificial Intelligence</h3>
-
-                            <p>
-                                Exploring intelligent software,
-                                automation, data-driven systems
-                                and emerging applications of
-                                artificial intelligence.
-                            </p>
-
-                            <div class="tag-list">
-                                <span>INTELLIGENCE</span>
-                                <span>AUTOMATION</span>
-                                <span>DATA SYSTEMS</span>
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- APPROACH -->
-
-        <section class="section approach" id="approach">
-
-            <div class="section-inner">
-
-                <div class="section-label">
-                    <span>03</span>
-                    <span>OUR APPROACH</span>
-                </div>
-
-                <div class="approach-layout">
-
-                    <h2>
-                        Curiosity.<br>
-                        Technology.<br>
-                        <span>Progress.</span>
-                    </h2>
-
-                    <div class="approach-copy">
-
-                        <p>
-                            We believe meaningful technology starts
-                            with understanding problems, exploring
-                            possibilities and developing practical ideas.
-                        </p>
-
-                        <p>
-                            Our approach is grounded in learning,
-                            experimentation and responsible innovation.
-                        </p>
-
-                        <p>
-                            We are interested in technologies that
-                            expand capabilities and create new
-                            perspectives.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="principles">
-
-                    <div>
-                        <span>01</span>
-                        <h3>Curiosity</h3>
-                        <p>Questioning what is possible.</p>
-                    </div>
-
-                    <div>
-                        <span>02</span>
-                        <h3>Exploration</h3>
-                        <p>Understanding emerging technologies.</p>
-                    </div>
-
-                    <div>
-                        <span>03</span>
-                        <h3>Progress</h3>
-                        <p>Turning ideas into practical possibilities.</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTACT -->
-
-        <section class="contact" id="contact">
-
-            <div class="contact-inner">
-
-                <div class="section-label light-label">
-                    <span>04</span>
-                    <span>GET IN TOUCH</span>
-                </div>
-
-                <h2>
-                    Let's explore<br>
-                    <span>what's next.</span>
-                </h2>
-
-                <p>
-                    Have a project, idea or potential collaboration?
-                    Reach out to us directly.
-                </p>
-
-                <a
-                    href="mailto:contact.shootactive@gmail.com?subject=Enquiry%20%E2%80%94%20Aearis%20Oy"
-                    class="contact-button"
-                >
-                    CONTACT AEARIS <span>↗</span>
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer class="site-footer">
-
-        <div class="footer-inner">
-
-            <div class="footer-brand">
-
-                AEARIS OY
-
-                <small>SHOOT.</small>
-
-            </div>
-
-
-            <div class="footer-links">
-
-                <!-- LINKEDIN -->
-
-                <a
-                    href="https://www.linkedin.com/company/aearis-oy/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="linkedin-link"
-                    aria-label="Aearis Oy on LinkedIn"
-                    title="Aearis Oy on LinkedIn"
-                >
-
-                    <svg
-                        class="linkedin-icon"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true"
-                    >
-
-                        <path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.45H4.96V9h2.97v9.45ZM6.44 7.71a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44Zm12.01 10.74h-2.97v-4.6c0-1.1-.02-2.51-1.53-2.51-1.53 0-1.77 1.2-1.77 2.43v4.68H9.21V9h2.85v1.29h.04c.4-.74 1.37-1.53 2.82-1.53 3.01 0 3.57 1.98 3.57 4.56v5.13Z"/>
-
-                    </svg>
-
-                </a>
-
-
-                <!-- LEGAL LINKS -->
-
-                <a href="privacy-policy.html">
-                    Privacy Policy
-                </a>
-
-                <a href="cookie-policy.html">
-                    Cookie Policy
-                </a>
-
-            </div>
-
-
-            <p class="copyright">
-                © <span id="year"></span> Aearis Oy. All rights reserved.
-            </p>
-
+        <div class="section-text">
+          <p>
+            Aearis Oy is a technology company focused on intelligent
+            autonomous systems, aerial technologies and artificial
+            intelligence.
+          </p>
+
+          <p>
+            We explore the intersection of engineering, software and
+            intelligent automation to develop solutions for complex
+            real-world challenges.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology -->
+    <section class="section technology-section" id="technology">
+      <div class="section-inner">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT WE DO</p>
+          <h2>Technology with <span>purpose.</span></h2>
+          <p>
+            Combining advanced engineering with intelligent software
+            to create capable, adaptable systems.
+          </p>
         </div>
 
-    </footer>
+        <div class="technology-grid">
+          <article class="technology-card">
+            <div class="card-visual visual-aerial">
+              <div class="aerial-symbol">✧</div>
+            </div>
 
+            <div class="card-content">
+              <span class="card-number">01</span>
+              <h3>Autonomous Aerial Systems</h3>
+              <p>
+                Exploring autonomous flight technologies, intelligent
+                aerial platforms and advanced unmanned systems.
+              </p>
+            </div>
+          </article>
 
-    <!-- JAVASCRIPT -->
+          <article class="technology-card">
+            <div class="card-visual visual-ai">
+              <div class="ai-symbol">AI</div>
+            </div>
 
-    <script>
+            <div class="card-content">
+              <span class="card-number">02</span>
+              <h3>Artificial Intelligence</h3>
+              <p>
+                Applying intelligent algorithms, automation and
+                computational systems to enable smarter decisions.
+              </p>
+            </div>
+          </article>
 
-        // AUTOMATIC COPYRIGHT YEAR
+          <article class="technology-card">
+            <div class="card-visual visual-engineering">
+              <div class="engineering-symbol">◎</div>
+            </div>
 
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
+            <div class="card-content">
+              <span class="card-number">03</span>
+              <h3>Advanced Engineering</h3>
+              <p>
+                Bringing together hardware, software and engineering
+                principles to develop integrated technological solutions.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <!-- Approach -->
+    <section class="section approach-section" id="approach">
+      <div class="section-inner approach-content">
+        <p class="eyebrow">OUR APPROACH</p>
 
-        // MOBILE NAVIGATION
+        <h2>
+          Innovation begins<br>
+          with <span>possibility.</span>
+        </h2>
 
-        const menuToggle = document.querySelector(".menu-toggle");
+        <p>
+          We believe meaningful technological progress comes from
+          curiosity, precision and a willingness to challenge
+          conventional approaches.
+        </p>
+      </div>
+    </section>
 
-        const mobileNav = document.querySelector(".mobile-nav");
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+      <div class="section-inner contact-inner">
+        <div>
+          <p class="eyebrow">GET IN TOUCH</p>
+          <h2>Let's explore<br><span>what's possible.</span></h2>
+        </div>
 
+        <div class="contact-details">
+          <p>For business enquiries and collaboration:</p>
+          <a href="mailto:contact.shootactive@gmail.com">
+            contact.shootactive@gmail.com
+          </a>
+        </div>
+      </div>
+    </section>
 
-        menuToggle.addEventListener("click", () => {
+  </main>
 
-            const isOpen = mobileNav.classList.toggle("active");
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
 
-            menuToggle.setAttribute("aria-expanded", isOpen);
+      <p class="footer-copy">
+        © <span id="year"></span> Aearis Oy. All rights reserved.
+      </p>
 
-            menuToggle.setAttribute(
-                "aria-label",
-                isOpen ? "Close navigation" : "Open navigation"
-            );
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
 
-        });
+        <a
+          href="https://www.linkedin.com/company/aearis-oy/?viewAsMember=true"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="linkedin-link"
+          aria-label="Aearis Oy on LinkedIn"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.37 4.28 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/>
+          </svg>
+        </a>
+      </div>
 
+    </div>
+  </footer>
 
-        // CLOSE MOBILE MENU AFTER CLICKING A LINK
-
-        document.querySelectorAll(".mobile-nav a").forEach(link => {
-
-            link.addEventListener("click", () => {
-
-                mobileNav.classList.remove("active");
-
-                menuToggle.setAttribute("aria-expanded", "false");
-
-                menuToggle.setAttribute("aria-label", "Open navigation");
-
-            });
-
-        });
-
-    </script>
+  <script src="script.js"></script>
 
 </body>
-
 </html>
