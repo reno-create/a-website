@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <meta name="theme-color" content="#080808">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -350,6 +352,40 @@
             font-weight: bold;
         }
 
+        .footer-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #888;
+            font-size: 12px;
+            transition: color .3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .linkedin-link {
+            display: inline-flex;
+            align-items: center;
+            color: #aaa !important;
+            transition: color .3s;
+        }
+
+        .linkedin-link:hover {
+            color: #0A66C2 !important;
+        }
+
+        .linkedin-icon {
+            width: 25px;
+            height: 25px;
+            display: block;
+        }
+
         /* ANIMATION */
 
         @keyframes reveal {
@@ -367,6 +403,7 @@
         /* MOBILE */
 
         @media (max-width: 768px) {
+
             .header-inner {
                 min-height: 72px;
             }
@@ -431,11 +468,19 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
+
+            .footer-links {
+                gap: 20px;
+            }
         }
+
     </style>
+
 </head>
 
 <body>
+
+    <!-- HEADER -->
 
     <header class="site-header">
 
@@ -458,15 +503,18 @@
                 class="menu-toggle"
                 aria-label="Open navigation"
                 aria-expanded="false"
+                type="button"
             >
                 ☰
             </button>
 
             <nav class="navigation">
+
                 <a href="#about">About</a>
                 <a href="#technology">Technology</a>
                 <a href="#approach">Approach</a>
                 <a href="#contact">Contact</a>
+
             </nav>
 
         </div>
@@ -474,6 +522,8 @@
     </header>
 
     <main>
+
+        <!-- HERO -->
 
         <section class="hero" id="home">
 
@@ -498,6 +548,8 @@
 
         </section>
 
+        <!-- ABOUT -->
+
         <section class="section" id="about">
 
             <p class="section-label">About Aearis</p>
@@ -515,6 +567,8 @@
             </p>
 
         </section>
+
+        <!-- TECHNOLOGY -->
 
         <section class="section technology" id="technology">
 
@@ -580,6 +634,8 @@
 
         </section>
 
+        <!-- APPROACH -->
+
         <section class="section approach" id="approach">
 
             <div class="approach-grid">
@@ -614,7 +670,7 @@
 
         </section>
 
-        <!-- CONTACT: EMAIL ONLY -->
+        <!-- CONTACT -->
 
         <section class="contact" id="contact">
 
@@ -646,17 +702,62 @@
 
     </main>
 
+    <!-- FOOTER -->
+
     <footer>
 
         <div class="footer-brand">AEARIS OY</div>
 
         <p>SHOOT.</p>
 
+        <div class="footer-links">
+
+            <!-- LINKEDIN -->
+
+            <a
+                href="https://www.linkedin.com/company/aearis-oy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="linkedin-link"
+                aria-label="Aearis Oy on LinkedIn"
+                title="Aearis Oy on LinkedIn"
+            >
+
+                <svg
+                    class="linkedin-icon"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                >
+
+                    <path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.45H4.96V9h2.97v9.45ZM6.44 7.71a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44Zm12.01 10.74h-2.97v-4.6c0-1.1-.02-2.51-1.53-2.51-1.53 0-1.77 1.2-1.77 2.43v4.68H9.21V9h2.85v1.29h.04c.4-.74 1.37-1.53 2.82-1.53 3.01 0 3.57 1.98 3.57 4.56v5.13Z"/>
+
+                </svg>
+
+            </a>
+
+            <!-- PRIVACY POLICY -->
+
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+
+            <!-- COOKIE POLICY -->
+
+            <a href="cookie-policy.html">
+                Cookie Policy
+            </a>
+
+        </div>
+
         <p>
             © <span id="year"></span> Aearis Oy. All rights reserved.
         </p>
 
     </footer>
+
+    <!-- JAVASCRIPT -->
 
     <script>
 
@@ -668,6 +769,11 @@
             const isOpen = navigation.classList.toggle("active");
 
             menuToggle.setAttribute("aria-expanded", isOpen);
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation" : "Open navigation"
+            );
 
             menuToggle.textContent = isOpen ? "×" : "☰";
 
@@ -681,6 +787,8 @@
 
                 menuToggle.setAttribute("aria-expanded", "false");
 
+                menuToggle.setAttribute("aria-label", "Open navigation");
+
                 menuToggle.textContent = "☰";
 
             });
@@ -693,4 +801,5 @@
     </script>
 
 </body>
+
 </html>
