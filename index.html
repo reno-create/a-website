@@ -2,227 +2,695 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aearis Oy develops intelligent autonomous aerial systems and AI-powered technologies.">
-  <title>Aearis Oy | Intelligent Autonomous Systems</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aearis Oy | SHOOT.</title>
+
+    <meta name="description" content="Aearis Oy explores Unmanned Aircraft Systems and Artificial Intelligence.">
+    <meta name="theme-color" content="#080808">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #080808;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* HEADER */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            background: #000;
+            border-bottom: 1px solid #222;
+        }
+
+        .header-inner {
+            max-width: 1400px;
+            min-height: 90px;
+            margin: auto;
+            padding: 0 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            min-width: 180px;
+        }
+
+        .brand-logo {
+            display: block;
+            width: 180px;
+            height: 70px;
+            object-fit: contain;
+            object-position: left center;
+            filter: none;
+            background: transparent;
+        }
+
+        .brand-fallback {
+            display: none;
+            font-size: 19px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .navigation {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+        }
+
+        .navigation a {
+            color: #ccc;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color .3s;
+        }
+
+        .navigation a:hover {
+            color: #fff;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: white;
+            background: none;
+            border: none;
+            font-size: 27px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 690px;
+            padding: 130px 8%;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.35)),
+                url("https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=2000&q=85")
+                center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            animation: reveal 1s ease both;
+        }
+
+        .eyebrow {
+            color: #aaa;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(65px, 11vw, 145px);
+            line-height: .95;
+            letter-spacing: -7px;
+            font-weight: 700;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 span {
+            color: #888;
+        }
+
+        .hero-description {
+            max-width: 520px;
+            color: #d0d0d0;
+            font-size: 17px;
+            margin-bottom: 38px;
+        }
+
+        .primary-button {
+            display: inline-block;
+            padding: 15px 29px;
+            border: 1px solid white;
+            color: white;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: .3s;
+        }
+
+        .primary-button:hover {
+            background: white;
+            color: black;
+        }
+
+        /* GENERAL SECTIONS */
+
+        .section {
+            max-width: 1400px;
+            margin: auto;
+            padding: 115px 8%;
+        }
+
+        .section-label {
+            color: #888;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: clamp(36px, 5vw, 65px);
+            line-height: 1.08;
+            letter-spacing: -2px;
+            max-width: 850px;
+            margin-bottom: 30px;
+        }
+
+        .section-text {
+            color: #aaa;
+            max-width: 650px;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        /* TECHNOLOGY */
+
+        .technology {
+            background: #101010;
+            max-width: none;
+            padding-left: max(8%, calc((100% - 1180px) / 2));
+            padding-right: max(8%, calc((100% - 1180px) / 2));
+        }
+
+        .technology-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 25px;
+            margin-top: 60px;
+        }
+
+        .technology-card {
+            background: #171717;
+            border: 1px solid #292929;
+            overflow: hidden;
+            transition: transform .4s, border-color .4s;
+        }
+
+        .technology-card:hover {
+            transform: translateY(-7px);
+            border-color: #666;
+        }
+
+        .technology-image {
+            width: 100%;
+            height: 330px;
+            object-fit: cover;
+            display: block;
+            filter: brightness(.8);
+            transition: transform .6s, filter .4s;
+        }
+
+        .technology-card:hover .technology-image {
+            transform: scale(1.04);
+            filter: brightness(1);
+        }
+
+        .card-content {
+            padding: 30px;
+        }
+
+        .card-number {
+            color: #777;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .card-content h3 {
+            font-size: 27px;
+            margin: 13px 0;
+        }
+
+        .card-content p {
+            color: #aaa;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* APPROACH */
+
+        .approach {
+            background: #080808;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .approach-image {
+            width: 100%;
+            height: 440px;
+            object-fit: cover;
+            filter: grayscale(100%);
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #111;
+            padding: 120px 8%;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: clamp(40px, 6vw, 75px);
+            letter-spacing: -3px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .contact-description {
+            color: #aaa;
+            margin-bottom: 35px;
+        }
+
+        .contact-email {
+            display: inline-block;
+            font-size: clamp(18px, 3vw, 25px);
+            color: #fff;
+            letter-spacing: .5px;
+            padding: 15px 0;
+            border-bottom: 1px solid #777;
+            transition: color .3s, border-color .3s;
+        }
+
+        .contact-email:hover {
+            color: #aaa;
+            border-color: #fff;
+        }
+
+        .contact-note {
+            color: #777;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #000;
+            border-top: 1px solid #222;
+            padding: 35px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        footer p {
+            color: #777;
+            font-size: 12px;
+        }
+
+        .footer-brand {
+            color: white;
+            font-size: 14px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        /* ANIMATION */
+
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+            .header-inner {
+                min-height: 72px;
+            }
+
+            .brand-logo {
+                width: 145px;
+                height: 55px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .navigation {
+                display: none;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                width: 100%;
+                padding: 30px;
+                background: #000;
+                flex-direction: column;
+                align-items: flex-start;
+                border-top: 1px solid #222;
+            }
+
+            .navigation.active {
+                display: flex;
+            }
+
+            .hero {
+                min-height: 600px;
+                padding: 100px 7%;
+            }
+
+            .hero h1 {
+                letter-spacing: -4px;
+            }
+
+            .technology-grid,
+            .approach-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .technology-image {
+                height: 250px;
+            }
+
+            .approach-image {
+                height: 300px;
+            }
+
+            .section {
+                padding: 85px 7%;
+            }
+
+            .contact {
+                padding: 85px 7%;
+            }
+
+            footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="#home" class="logo">
-        <img src="logo.png" alt="Aearis Oy logo"
-             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <span class="logo-fallback">AEARIS</span>
-      </a>
+    <header class="site-header">
 
-      <nav class="desktop-nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#technology">Technology</a>
-        <a href="#approach">Our Approach</a>
-        <a href="#contact" class="nav-contact">Contact</a>
-      </nav>
+        <div class="header-inner">
 
-      <button class="menu-toggle" aria-label="Open menu"
-              aria-expanded="false" aria-controls="mobile-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+            <a class="brand" href="#home" aria-label="Aearis home">
 
-    <nav class="mobile-nav" id="mobile-nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#technology">Technology</a>
-      <a href="#approach">Our Approach</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+                <img
+                    src="./logo.png"
+                    alt="Aearis Oy"
+                    class="brand-logo"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                >
 
-  <main>
+                <span class="brand-fallback">AEARIS OY</span>
 
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div class="hero-content">
-        <p class="eyebrow">AEROSPACE · AUTONOMY · ARTIFICIAL INTELLIGENCE</p>
+            </a>
 
-        <h1>
-          Intelligent Systems.<br>
-          <span>New Perspectives.</span>
-        </h1>
+            <button
+                class="menu-toggle"
+                aria-label="Open navigation"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
 
-        <p class="hero-description">
-          Developing intelligent autonomous aerial systems and
-          advanced AI technologies for a smarter, more connected future.
-        </p>
+            <nav class="navigation">
+                <a href="#about">About</a>
+                <a href="#technology">Technology</a>
+                <a href="#approach">Approach</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
-        <a href="#about" class="primary-button">Discover Aearis</a>
-      </div>
-
-      <div class="hero-decoration">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <div class="orbit-center"></div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="section about-section" id="about">
-      <div class="section-inner about-grid">
-        <div>
-          <p class="eyebrow">WHO WE ARE</p>
-          <h2>Engineering the <span>future of autonomy.</span></h2>
         </div>
 
-        <div class="section-text">
-          <p>
-            Aearis Oy is a technology company focused on intelligent
-            autonomous systems, aerial technologies and artificial
-            intelligence.
-          </p>
+    </header>
 
-          <p>
-            We explore the intersection of engineering, software and
-            intelligent automation to develop solutions for complex
-            real-world challenges.
-          </p>
-        </div>
-      </div>
-    </section>
+    <main>
 
-    <!-- Technology -->
-    <section class="section technology-section" id="technology">
-      <div class="section-inner">
-        <div class="section-heading">
-          <p class="eyebrow">WHAT WE DO</p>
-          <h2>Technology with <span>purpose.</span></h2>
-          <p>
-            Combining advanced engineering with intelligent software
-            to create capable, adaptable systems.
-          </p>
-        </div>
+        <section class="hero" id="home">
 
-        <div class="technology-grid">
-          <article class="technology-card">
-            <div class="card-visual visual-aerial">
-              <div class="aerial-symbol">✧</div>
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    Aearis Oy · UAS · Artificial Intelligence
+                </p>
+
+                <h1>SHOOT<span>.</span></h1>
+
+                <p class="hero-description">
+                    Exploring new perspectives through unmanned aircraft
+                    systems and intelligent technology.
+                </p>
+
+                <a href="#technology" class="primary-button">
+                    Explore Aearis
+                </a>
+
             </div>
 
-            <div class="card-content">
-              <span class="card-number">01</span>
-              <h3>Autonomous Aerial Systems</h3>
-              <p>
-                Exploring autonomous flight technologies, intelligent
-                aerial platforms and advanced unmanned systems.
-              </p>
+        </section>
+
+        <section class="section" id="about">
+
+            <p class="section-label">About Aearis</p>
+
+            <h2 class="section-title">
+                Technology changes how we see the world.
+            </h2>
+
+            <p class="section-text">
+                Aearis Oy is an emerging technology venture focused on
+                Unmanned Aircraft Systems and Artificial Intelligence.
+                We are exploring the capabilities of aerial technology,
+                intelligent systems and the opportunities they create
+                across modern industries.
+            </p>
+
+        </section>
+
+        <section class="section technology" id="technology">
+
+            <p class="section-label">Areas of interest</p>
+
+            <h2 class="section-title">
+                Two fields. A world of possibilities.
+            </h2>
+
+            <div class="technology-grid">
+
+                <article class="technology-card">
+
+                    <img
+                        class="technology-image"
+                        src="https://images.unsplash.com/photo-1506947411487-a56738267384?auto=format&fit=crop&w=1200&q=85"
+                        alt="Unmanned aerial technology"
+                        loading="lazy"
+                    >
+
+                    <div class="card-content">
+
+                        <span class="card-number">UAS</span>
+
+                        <h3>Unmanned Aircraft Systems</h3>
+
+                        <p>
+                            Exploring aerial platforms, flight technology,
+                            aerial imaging and the expanding applications
+                            of unmanned aircraft systems.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="technology-card">
+
+                    <img
+                        class="technology-image"
+                        src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=85"
+                        alt="Artificial intelligence technology"
+                        loading="lazy"
+                    >
+
+                    <div class="card-content">
+
+                        <span class="card-number">AI</span>
+
+                        <h3>Artificial Intelligence</h3>
+
+                        <p>
+                            Exploring intelligent software, automation,
+                            data-driven systems and emerging applications
+                            of artificial intelligence.
+                        </p>
+
+                    </div>
+
+                </article>
+
             </div>
-          </article>
 
-          <article class="technology-card">
-            <div class="card-visual visual-ai">
-              <div class="ai-symbol">AI</div>
+        </section>
+
+        <section class="section approach" id="approach">
+
+            <div class="approach-grid">
+
+                <div>
+
+                    <p class="section-label">Our approach</p>
+
+                    <h2 class="section-title">
+                        Curiosity. Technology. Progress.
+                    </h2>
+
+                    <p class="section-text">
+                        We believe meaningful technology starts with
+                        understanding problems, exploring possibilities
+                        and developing practical ideas.
+
+                        Our approach is grounded in learning,
+                        experimentation and responsible innovation.
+                    </p>
+
+                </div>
+
+                <img
+                    class="approach-image"
+                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85"
+                    alt="Earth viewed through advanced technology"
+                    loading="lazy"
+                >
+
             </div>
 
-            <div class="card-content">
-              <span class="card-number">02</span>
-              <h3>Artificial Intelligence</h3>
-              <p>
-                Applying intelligent algorithms, automation and
-                computational systems to enable smarter decisions.
-              </p>
+        </section>
+
+        <!-- CONTACT: EMAIL ONLY -->
+
+        <section class="contact" id="contact">
+
+            <div class="contact-container">
+
+                <p class="section-label">Get in touch</p>
+
+                <h2>Let's explore what's next.</h2>
+
+                <p class="contact-description">
+                    Have a project, idea or potential collaboration?
+                    Reach out to us directly.
+                </p>
+
+                <a
+                    href="mailto:contact.shootactive@gmail.com?subject=Enquiry%20%E2%80%94%20Aearis%20Oy"
+                    class="contact-email"
+                >
+                    contact.shootactive@gmail.com
+                </a>
+
+                <p class="contact-note">
+                    For business enquiries and collaborations.
+                </p>
+
             </div>
-          </article>
 
-          <article class="technology-card">
-            <div class="card-visual visual-engineering">
-              <div class="engineering-symbol">◎</div>
-            </div>
+        </section>
 
-            <div class="card-content">
-              <span class="card-number">03</span>
-              <h3>Advanced Engineering</h3>
-              <p>
-                Bringing together hardware, software and engineering
-                principles to develop integrated technological solutions.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
+    </main>
 
-    <!-- Approach -->
-    <section class="section approach-section" id="approach">
-      <div class="section-inner approach-content">
-        <p class="eyebrow">OUR APPROACH</p>
+    <footer>
 
-        <h2>
-          Innovation begins<br>
-          with <span>possibility.</span>
-        </h2>
+        <div class="footer-brand">AEARIS OY</div>
+
+        <p>SHOOT.</p>
 
         <p>
-          We believe meaningful technological progress comes from
-          curiosity, precision and a willingness to challenge
-          conventional approaches.
+            © <span id="year"></span> Aearis Oy. All rights reserved.
         </p>
-      </div>
-    </section>
 
-    <!-- Contact -->
-    <section class="section contact-section" id="contact">
-      <div class="section-inner contact-inner">
-        <div>
-          <p class="eyebrow">GET IN TOUCH</p>
-          <h2>Let's explore<br><span>what's possible.</span></h2>
-        </div>
+    </footer>
 
-        <div class="contact-details">
-          <p>For business enquiries and collaboration:</p>
-          <a href="mailto:contact.shootactive@gmail.com">
-            contact.shootactive@gmail.com
-          </a>
-        </div>
-      </div>
-    </section>
+    <script>
 
-  </main>
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navigation = document.querySelector(".navigation");
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-inner">
+        menuToggle.addEventListener("click", () => {
 
-      <p class="footer-copy">
-        © <span id="year"></span> Aearis Oy. All rights reserved.
-      </p>
+            const isOpen = navigation.classList.toggle("active");
 
-      <div class="footer-links">
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="cookie-policy.html">Cookie Policy</a>
+            menuToggle.setAttribute("aria-expanded", isOpen);
 
-        <a
-          href="https://www.linkedin.com/company/aearis-oy/?viewAsMember=true"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="linkedin-link"
-          aria-label="Aearis Oy on LinkedIn"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.37 4.28 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/>
-          </svg>
-        </a>
-      </div>
+            menuToggle.textContent = isOpen ? "×" : "☰";
 
-    </div>
-  </footer>
+        });
 
-  <script src="script.js"></script>
+        document.querySelectorAll(".navigation a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navigation.classList.remove("active");
+
+                menuToggle.setAttribute("aria-expanded", "false");
+
+                menuToggle.textContent = "☰";
+
+            });
+
+        });
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
 
 </body>
 </html>
